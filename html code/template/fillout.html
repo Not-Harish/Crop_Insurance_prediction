@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color:rgb(246, 241, 241);
+}
+.container {
+    padding: 50px;
+  background-color: rgb(16, 204, 229);
+}
+
+input[type=text], input[type=password], textarea {
+  width: 50%;
+  padding: 15px;
+  margin: 7px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: rgb(255, 254, 252);
+  outline: none;
+}
+ div {
+            padding: 30px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 60px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: rgb(128, 31, 31);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<form style="text-align:center;" method="post" action="/submit">
+  <div class="container">
+  <center>  <h1>Know Your Risk </h1> </center>
+  <hr>
+  <div>
+  <label> 
+    State :
+    </label>  
+    <select name="stateName">
+    <option value="">select</option>
+    <option name="state" value="Andaman and Nicobar Island">Andaman and Nicobar Island</option>
+    <option name="state" value="Andhra Pradesh">Andhra Pradesh</option>
+    <option name="state" value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option name="state" value="Assam">Assam</option>
+    <option name="state" value="Bihar">Bihar</option>
+    <option name="state" value="CHANDIGARH">CHANDIGARH</option>
+    <option name="state" value="Chhattisgarh">Chhattisgarh</option>
+    <option name="state" value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+    <option name="state" value="Daman and Diu">Daman and Diu</option>
+    <option name="state" value="Delhi">Delhi</option>
+    <option name="state" value="Goa">Goa</option>
+    <option name="state" value="Gujarat">Gujarat</option>
+    <option name="state" value="Haryana">Haryana</option>
+    <option name="state" value="Himachal Pradesh">Himachal Pradesh</option>
+    <option name="state" value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option name="state" value="Jharkhand">Jharkhand</option>
+    <option name="state" value="Karnataka">Karnataka</option>
+    <option name="state" value="Kerala">Kerala</option>
+    <option name="state" value="Laddak">Laddak</option>
+    <option name="state" value="Madhya Pradesh">Madhya Pradesh</option>
+    <option name="state" value="Maharashtra">Maharashtra</option>
+    <option name="state" value="Manipur">Manipur</option>
+    <option name="state" value="Meghalaya">Meghalaya</option>
+    <option name="state" value="Mizoram">Mizoram</option>
+    <option name="state" value="Nagaland">Nagaland</option>
+    <option name="state" value="Odisha">Odisha</option>
+    <option name="state" value="Puducherry">Puducherry</option>
+    <option name="state" value="Punjab">Punjab</option>
+    <option name="state" value="Rajasthan">Rajasthan</option>
+    <option name="state" value="Sikkim">Sikkim</option>
+    <option name="state" value="Tamil Nadu">Tamil Nadu</option>
+    <option name="state" value="Telangana">Telangana</option>
+    <option name="state" value="THE DADRA AND NAGAR HAVELI">THE DADRA AND NAGAR HAVELI</option>
+    <option name="state" value="Tripura">Tripura</option>
+    <option name="state" value="Uttar Pradesh">Uttar Pradesh</option>
+    <option name="state" value="Uttarakhand">Uttarakhand</option>
+    <option name="state" value="West Bengal">West Bengal</option>
+    
+    
+    </select>
+    </div>
+<label> DISTRICT: </label> 
+<input type="text" name="district" placeholder="Enter Your District" size="15" required /> <br>
+<label> CROP TYPE:</label>  
+<input type="text" name="crop" placeholder="Enter Your Crop Type" size="15"required /><br> 
+<label> YEAR:</label>  
+<input type="text" name="year" placeholder="Enter The Year" size="15"required />
+<div>
+<label> 
+SEASON :
+</label><br>
+<br>
+<input type="radio" value="Kharif" name="season" checked > Kharif
+<input type="radio" value="Rabi" name="season"> Rabi 
+<input type="radio" value="Whole Year" name="season"> Whole Year
+<input type="radio" value="Summer" name="season"> Summer 
+<input type="radio" value="Winter" name="season"> Winter
+<input type="radio" value="Autumn" name="season"> Autumn
+
+<br>
+<br>
+<label> AREA: </label> 
+<input type="text" name="area" placeholder="Enter Your District" size="15" required /> <br>
+
+</div>
+  <div style="text-align:center;">
+    <button type="submit" style="text-align:center;">Calculate</button>
+  </div>
+
+  <div style="text-align:center;">
+    <p style="text-align: center;">{{message}}</p>
+
+  </div>
